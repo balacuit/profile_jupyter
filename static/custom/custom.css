@@ -4,4 +4,53 @@ Placeholder for custom user CSS
 mainly to be overridden in profile/static/custom/custom.css
 
 This will always be an empty file in IPython
+*//*
+ Experimenting  with auto-numbering of h1, h2, h3, h4, h5
+
+ Ref: https://github.com/ipython/ipython/issues/4097
+
+div#notebook-container {
+  counter-reset: count1;
+}
+
+div#notebook-container h1 {
+  counter-reset: count2;
+}
+div#notebook-container h1:before {
+  counter-increment: count1 1;
+  content: counter(count1) ". " ;
+}
+
+div#notebook-container h2 {
+  counter-reset: count3;
+  margin-left: 25px;
+}
+div#notebook-container h2:before {
+  content: counter(count1) "." counter(count2) " ";
+  counter-increment: count2;
+  content: counter(count2) " ";
+}
+div#notebook-container h3 {
+  counter-reset: hc4;
+}
+div#notebook-container h3:before {
+  content: counter(count1) "." counter(count2) "." counter(count3) " ";
+  counter-increment: count3 1;
+}
+div#notebook-container > h4 {
+  counter-reset: hc5;
+}
+div#notebook-container > h4:before {
+  content: counter(count1) "." counter(count2) "." counter(count3) "." counter(hc4) " ";
+  counter-increment: hc4 1;
+}
+
+div#notebook-container > h5 {
+  counter-reset: hc6;
+}
+div#notebook-container > h5:before {
+  content: counter(count1) "." counter(count2) "." counter(count3) "." counter(hc4) "." counter(hc5) " ";
+  counter-increment: hc5 1;
+}
+
 */
