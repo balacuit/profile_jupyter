@@ -1,0 +1,14 @@
+# system files
+.DS_Store
+Thumbs.db
+
+# jupyter
+.ipynb_checkpoints
+db
+history.sqlite
+log
+pid
+security
+
+# python
+*.py[cod]
