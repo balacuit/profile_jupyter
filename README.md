@@ -1,2 +1,3 @@
-# jupyter_profile
+# profile_jupyter
 Customized Jupyter profile.
+
